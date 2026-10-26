@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#166534">
+    <title>Assistente Virtual | Centro de Formação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>FormaTech</h1>
+                <p>Centro de Formação Profissional</p>
+            </div>
+        </div>
+        <span class="status"><span></span> Assistente online</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <span class="eyebrow">SEU FUTURO COMEÇA AQUI</span>
+            <h2>Olá! Como podemos <span>ajudar você?</span></h2>
+            <p>
+                Tire suas dúvidas sobre nossos cursos, inscrições,
+                horários e localização. Digite ou fale com nosso assistente.
+            </p>
+        </section>
+
+        <section class="faq-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Perguntas frequentes</h2>
+                    <p>Escolha uma opção para começar.</p>
+                </div>
+            </div>
+
+            <div id="faq-cards" class="faq-cards">
+                <!-- Os cards são criados pelo JavaScript -->
+            </div>
+        </section>
+
+        <section class="chat-card">
+            <div class="chat-header">
+                <div class="bot-avatar">🤖</div>
+                <div class="chat-title">
+                    <h2>Assistente virtual</h2>
+                    <p>Atendimento automatizado</p>
+                </div>
+                <button id="clear-chat" class="clear-button" type="button">
+                    Limpar conversa
+                </button>
+            </div>
+
+            <div
+                id="chat-messages"
+                class="chat-messages"
+                role="log"
+                aria-live="polite"
+                aria-label="Mensagens da conversa"
+            ></div>
+
+            <div id="voice-status" class="voice-status" aria-live="polite">
+                Digite uma pergunta ou utilize o microfone.
+            </div>
+
+            <form id="chat-form" class="chat-form">
+                <label class="sr-only" for="chat-input">
+                    Digite sua pergunta
+                </label>
+
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Digite sua pergunta..."
+                    autocomplete="off"
+                    maxlength="500"
+                    required
+                >
+
+                <button
+                    type="button"
+                    id="mic-button"
+                    class="icon-button"
+                    aria-label="Fazer pergunta por voz"
+                    title="Falar uma pergunta"
+                >🎤</button>
+
+                <button type="submit" id="send-button" class="send-button">
+                    Enviar <span>➤</span>
+                </button>
+            </form>
+
+            <div class="chat-footer">
+                <span>🎙️ Você pode falar ou digitar.</span>
+                <button id="toggle-audio" type="button" aria-pressed="true">
+                    🔊 Áudio ativado
+                </button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>Conheça nossos cursos</h2>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <div class="course-icon dev-icon">💻</div>
+                    <h3>Desenvolvimento (DEV)</h3>
+                    <p>
+                        Aprenda sobre programação, criação de sites,
+                        sistemas e tecnologia.
+                    </p>
+                    <button class="course-button" data-question="Quero saber mais sobre o curso de DEV">
+                        Saber mais →
+                    </button>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon logistics-icon">📦</div>
+                    <h3>Logística</h3>
+                    <p>
+                        Conheça conceitos de estoque, transporte,
+                        organização e distribuição de produtos.
+                    </p>
+                    <button class="course-button" data-question="Quero saber mais sobre o curso de Logística">
+                        Saber mais →
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="location-card">
+            <div class="location-icon">📍</div>
+            <div>
+                <h2>Onde estamos?</h2>
+                <p>
+                    Avenida Bernardino Flora Furlan, 1920,
+                    Zona Norte, Distrito Industrial,
+                    Pederneiras - SP.
+                </p>
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Avenida+Bernardino+Flora+Furlan+1920+Pederneiras+SP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Ver no Google Maps ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FormaTech © <span id="current-year"></span> · Centro de Formação Profissional</p>
+        <p>Assistente virtual informativo.</p>
+    </footer>
+</body>
+</html>
